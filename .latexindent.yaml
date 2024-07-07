@@ -64,6 +64,8 @@ fineTuning:
             (?:TS)                        # TS
             |                             #
             (?:GS)                        # GS
+            |                             #
+            (?:Ph.D)                        # GS
           )                               #
         )                                 #
       )                                   #

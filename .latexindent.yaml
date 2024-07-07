@@ -1,5 +1,5 @@
 # Using 2 spaces as indent
-defaultIndent: "  "
+defaultIndent: "    "
 
 # Using semantic line break (https://sembr.org/)
 modifyLineBreaks:

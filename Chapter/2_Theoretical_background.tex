@@ -22,6 +22,194 @@ Advantages of HTML:
     \item It is easy to integrate with various backend languages (e.g. PHP, Node.js, Java, \dots).
 \end{itemize}
 
+\subsection{CSS}
+CSS stands for Cascading Style Sheets, a language used to format elements created by markup languages like HTML.
+In other words, while HTML structures elements on a website such as headings, tables, and paragraphs, CSS enriches and enhances these HTML elements by styling them, changing text colors, adding background colors, or modifying page layouts.
+
+It can be understood that HTML creates the "skeleton" of a website, while CSS provides the colors, cosmetics, and appearance.
+
+\subsection{JavaScript}
+
+JavaScript is a widely used programming language for websites today, integrated and embedded into HTML to make websites more dynamic.
+JavaScript acts as part of a webpage, executing client-side scripts that enable both user-side and server-side (Node.js) functionalities to create dynamic web pages.
+
+JavaScript is an interpreted programming language with object-oriented capabilities.
+It is one of the three main languages in web development and has interdependencies to build professional, dynamic websites.
+
+The role of JavaScript is to manipulate HTML objects within the browser.
+It can easily intervene in actions such as adding, deleting, or modifying CSS properties and HTML tags.
+In other words, JavaScript is a client-side programming language for browsers.
+
+JavaScript can fetch data from the server through APIs returned as JSON strings and display them on the user interface.
+It can also retrieve data entered into forms on the interface and call APIs to save the data to the server.
+
+\section{Backend}
+
+\subsection{Java}
+
+Java is one of the object-oriented programming languages used in software development, web applications, games, and mobile applications.
+It was initiated by James Gosling and colleagues at Sun Microsystems in 1991, originally named Oak with the purpose of programming consumer electronic devices.
+
+Unlike some other languages that run only in specific environments, Java programs can run effectively in various environments, known as "cross-platform" capability.
+This hardware and operating system independence is demonstrated at both the source code and binary levels.
+
+Java is a powerful and versatile programming language capable of developing websites, apps, AI, embedded systems, and more.
+
+Java boasts several outstanding advantages:
+
+\begin{itemize}
+    \item It enforces strict data type requirements.
+    \item Java tightly controls access to arrays and strings, preventing buffer overflow techniques.
+          Thus, accesses do not exceed the size of arrays or strings.
+    \item Memory allocation and deallocation processes are handled automatically.
+    \item Error handling mechanisms simplify error recovery and management.
+          However, Java also has some limitations compared to other languages:
+    \item Like other interpreted languages, executing Java code is slower than compiled languages (though within acceptable limits).
+\end{itemize}
+
+\subsection{Spring framework}
+
+Spring is a Java framework widely used by millions of developers for developing high-performance, easily testable, and reusable code applications.
+
+Spring is an open-source framework developed, shared, and supported by a large community of users.
+It is built upon two core design principles: Dependency Injection and Aspect-Oriented Programming.
+The core features of Spring can be used to develop Java Desktop, mobile applications, and Java Web applications.
+Spring's primary goal is to simplify the development of J2EE applications based on the POJO (Plain Old Java Object) model.
+
+Spring is divided into several modules, each serving different application development purposes.
+
+Benefits of the Spring framework include:
+
+\begin{itemize}
+    \item Spring allows developers to use POJOs, simplifying work without needing to deal with EJB, application threading, configuration, etc.
+    \item Spring is modularly organized.
+          Although it consists of many packages and classes, developers only need to focus on what they need, ignoring the rest.
+    \item Spring supports various technologies such as ORM Framework, logging frameworks, JEE, scheduling libraries (Quartz and JDK timer), etc.
+    \item The Spring Web module is designed based on the MVC pattern, providing comprehensive features that replace other web frameworks like Struts.
+\end{itemize}
+
+Spring provides projects like Spring Security, which enhances authentication and authorization mechanisms for projects, ensuring secure user authentication and access control.
+
+Spring Boot: This framework facilitates rapid development and deployment of web applications.
+
+\subsection{Hibernate}
+
+Hibernate is an open-source Object Relational Mapping (ORM) library that helps Java developers write applications by mapping objects (POJOs) to relational database management systems, supporting object-oriented programming concepts with relational databases.
+
+With Hibernate, developers do not need to work directly with the database as they would with JDBC.
+Instead, they work with databases through classes that represent tables in the database.
+Before Hibernate, developers had to use JDBC to write lengthy and verbose SQL queries, which often resulted in poor performance due to frequent opening and closing of connections.
+With Hibernate, developers no longer need to write verbose SQL queries or manage connections manually multiple times.
+
+\section{Database management system (DBSM)}
+
+Database management system:
+
+\begin{itemize}
+    \item It is a system designed to automatically and systematically manage a specific volume of data.
+          Management actions include editing, deleting, storing, and searching (retrieving information) within a defined dataset.
+    \item It is a software package designed to define, manipulate, retrieve, and manage data within a database.
+\end{itemize}
+
+Roles of a Database Management System:
+
+\begin{itemize}
+    \item Provides an environment for creating databases: DBMS plays a role in providing users with a data definition language to describe, declare data types, and data structures.
+    \item Provides methods for updating and exploiting data: DBMS provides users with a data manipulation language to express requests, update operations, and data exploitation.
+          Data operations include Updating (inserting, editing, deleting data), Exploitation (searching, extracting data).
+    \item Provides tools to control and manage access to the database to ensure the implementation of basic database requirements.
+\end{itemize}
+
+Thanks to its useful functions and high performance, many DBMSs have been developed with the aim of improving data processing capabilities for computer software, websites, etc.
+
+Popular Database Management Systems today include MySQL, Oracle, SQLite, MongoDB, PostgreSQL \dots
+
+For this problem, I choose to use MySQL as the database management system.
+
+MySQL:
+
+\begin{itemize}
+    \item One of the most popular databases for web applications.
+    \item This DBMS tool allows the selection of multiple storage engines.
+    \item User-friendly interface and batch commands.
+\end{itemize}
+
+Advantages:
+
+\begin{itemize}
+    \item MySQL is free.
+    \item Provides extensive functionality.
+    \item Various user interfaces, including web and desktop app versions.
+    \item It can operate on other databases like DB2 and Oracle.
+\end{itemize}
+
+Disadvantages:
+
+\begin{itemize}
+    \item Requires more time to work with MySQL compared to automated systems.
+    \item Does not support XML or OLAP integration.
+    \item Support is available in the free version but requires payment for certain features.
+\end{itemize}
+
+\section{Tools usec}
+
+\subsection{IntelliJ IDE}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/ide.png}
+    \caption{Tool IntelliJ IDE}
+    \label{fig:ide}
+\end{figure}
+IntelliJ IDEA is an IDE used for Java programming (it also supports programming in some other languages like Node.js, Python \dots).
+
+Generally, IntelliJ IDEA is similar to Eclipse because it is primarily used for Java but can also support other languages and has numerous supporting plugins.
+
+IntelliJ IDEA has two editions: a free version (Community) and a paid version (Ultimate).
+The paid version includes additional support for JavaScript, TypeScript, and plugins like GWT, Vaadin, and duplicate code detection.
+
+\subsection{MySQL Workbench}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/mysql.png}
+    \caption{Tool MySQL Workbench}
+    \label{fig:mySQL}
+\end{figure}
+
+MySQL Workbench is a visual database design tool and integrated development environment (IDE) for MySQL.
+It provides a graphical interface to design, model, and manage MySQL databases.
+
+Similar to IntelliJ IDEA for Java development, MySQL Workbench is tailored specifically for MySQL databases but offers broader functionality.
+It supports tasks such as database modeling, SQL development, and administration through a user-friendly graphical interface.
+
+MySQL Workbench is available in two editions: Community (free) and Standard/Enterprise (paid), with the latter offering advanced features like database migration, performance monitoring, and collaboration tools.
+
+\subsection{Postman}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/postman.png}
+    \caption{Tool Postman}
+    \label{fig:postman}
+\end{figure}
+
+Postman is currently one of the most popular tools used for API testing.
+With Postman, you can call Rest APIs without writing any code.
+
+Postman supports all HTTP methods (GET, POST, PUT, PATCH, DELETE, etc\dots)
+
+Additionally, it allows you to save the history of requests, which is very convenient for reuse when needed.
+
+Benefits of using Postman:
+
+\begin{itemize}
+    \item Using Collections: Postman allows users to create collections for their API calls.
+          Each collection can have subfolders and multiple requests, which helps organize test sets.
+    \item Collaboration: Collections and environments can be imported or exported, making it easy to share files.
+    \item API Testing: Test the HTTP response status.
+    \item Debugging: The Postman console helps check what data has been retrieved, making it easy to debug tests.
+\end{itemize}
+
 \section{Status survey}
 \label{section:2.1}
 Thông thường, khảo sát chi tiết về hiện trạng và yêu cầu của phần mềm sẽ được lấy từ ba nguồn chính, đó là (i) người dùng/khách hàng, (ii) các hệ thống đã có, (iii) và các ứng dụng tương tự.

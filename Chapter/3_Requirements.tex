@@ -31,7 +31,7 @@ The website also offers a real-time chat feature for users to conveniently excha
 This document specifies the detailed requirements for a room rental web application, catering to administrators and customers.
 The application aims to facilitate efficient room management and rental transactions.
 
-\begin{table}[!t]
+\begin{table}[ht!]
     \caption{User Roles and Descriptions}
     \label{table:roles}
     \centering
@@ -157,6 +157,43 @@ Statistical Analysis:
 \subsection{Entities}
 
 \subsubsection{Define all entities}
+
+\begin{table}[H]
+    \caption{Define all entities}
+    \label{table:entities}
+    \centering
+    \begin{tblr}{|c|l|X|}
+        \hline
+        No & Entity         & Role                                                            \\
+        \hline
+        1  & Authority      & Describe the main roles of this website                         \\
+        \hline
+        2  & Blog           & Describe the rental house post                                  \\
+        \hline
+        3  & Category       & Categorize the objectives of each room on the website.          \\
+        \hline
+        4  & User           & Save and describe information of each user register account.    \\
+        \hline
+        5  & Contact        & Describe the information to contact to users                    \\
+        \hline
+        6  & Room           & Describe all information of each hostel.                        \\
+        \hline
+        7  & Status room    & Informing the owner about the validity of the room information. \\
+        \hline
+        8  & Image room     & Show images of this hostel to user can look at carefully.       \\
+        \hline
+        9  & Province       & Save all provinces in Vietnam.                                  \\
+        \hline
+        10 & Districts      & Save all districts of each province.                            \\
+        \hline
+        11 & Wards          & Save all wards of each district.                                \\
+        \hline
+        12 & History pay    & Save user payment information.                                  \\
+        \hline
+        13 & User-authority & Save role of each user.                                         \\
+        \hline
+    \end{tblr}
+\end{table}
 
 \subsubsection{Data of each entity}
 

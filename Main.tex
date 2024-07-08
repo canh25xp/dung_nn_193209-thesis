@@ -4,6 +4,7 @@
 \usepackage[utf8]{vietnam}
 \usepackage[top=2cm, bottom=2cm, left=3.5cm, right=2.5cm]{geometry}
 
+\usepackage{tabularray}
 \usepackage{graphicx} % Cho phép chèn hỉnh ảnh
 \usepackage{fancybox} % Tạo khung box
 \usepackage{indentfirst} % Thụt đầu dòng ở dòng đầu tiên trong đoạn
@@ -141,7 +142,7 @@
 \hypersetup{pdfborder = {0 0 0}} %
 \hypersetup{pdftitle={\TITLE},
 	pdfauthor={\AUTHOR}}
-	
+
 \usepackage[all]{hypcap} % Cho phép tham chiếu chính xác đến hình ảnh và bảng biểu
 
 \graphicspath{{figures/}{../figures/}} % Thư mục chứa các hình ảnh
@@ -198,32 +199,32 @@
 \renewcommand*\contentsname{TABLE OF CONTENTS}
 
 \titlecontents{chapter}
-    [0.0cm]             % left margin
-    {\bfseries\vspace{0.3cm}}                  % above code
-    {{\bfseries{\scshape}
-    CHAPTER \thecontentslabel.\ }}
-    % numbered format
-    {}         % unnumbered format
-    {\titlerule*[0.3pc]{.}\contentspage}         % filler-page-format, e.g dots
+[0.0cm]             % left margin
+{\bfseries\vspace{0.3cm}}                  % above code
+{{\bfseries{\scshape}
+            CHAPTER \thecontentslabel.
+            \ }}
+% numbered format
+{}         % unnumbered format
+{\titlerule*[0.3pc]{.}\contentspage}         % filler-page-format, e.g dots
 
-    
 \titlecontents{section}
-    [0.0cm]             % left margin
-    {\vspace{0.3cm}}                  % above code
-    {\thecontentslabel \ } % numbered format
-    {}         % unnumbered format
-    {\titlerule*[0.3pc]{.}\contentspage}         % filler-page-format, e.g dots
-    
-\titlecontents{subsection}
-    [1.0cm]             % left margin
-    {\vspace{0.3cm}}                  % above code
-    {\thecontentslabel \ } % numbered format
-    {}         % unnumbered format
-    {\titlerule*[0.3pc]{.}\contentspage}         % filler-page-format, e.g dots
+[0.0cm]             % left margin
+{\vspace{0.3cm}}                  % above code
+{\thecontentslabel \ } % numbered format
+{}         % unnumbered format
+{\titlerule*[0.3pc]{.}\contentspage}         % filler-page-format, e.g dots
 
- % Tạo mục lục tự động
+\titlecontents{subsection}
+[1.0cm]             % left margin
+{\vspace{0.3cm}}                  % above code
+{\thecontentslabel \ } % numbered format
+{}         % unnumbered format
+{\titlerule*[0.3pc]{.}\contentspage}         % filler-page-format, e.g dots
+
+% Tạo mục lục tự động
 \addtocontents{toc}{\protect\thispagestyle{empty}}
-\tableofcontents 
+\tableofcontents
 \thispagestyle{empty}
 \cleardoublepage
 
@@ -231,20 +232,19 @@
 %Tạo danh mục hình vẽ.
 \renewcommand{\listfigurename}{LIST OF FIGURES}
 {\let\oldnumberline\numberline
-\renewcommand{\numberline}{Figure~\oldnumberline}
-\listoffigures} 
+    \renewcommand{\numberline}{Figure~\oldnumberline}
+    \listoffigures}
 % \phantomsection\addcontentsline{toc}{section}{\numberline {} DANH MỤC HÌNH VẼ}
 \newpage
 
-
- %Tạo danh mục bảng biểu.
+%Tạo danh mục bảng biểu.
 \renewcommand{\listtablename}{LIST OF TABLES}
 {\let\oldnumberline\numberline
-\renewcommand{\numberline}{Bảng~\oldnumberline}
-\listoftables}
+    \renewcommand{\numberline}{Bảng~\oldnumberline}
+    \listoftables}
 % \phantomsection\addcontentsline{toc}{section}{\numberline {} DANH MỤC BẢNG BIỂU}
 
-\glsaddall 
+\glsaddall
 % \renewcommand*{\glossaryname}{Danh sách thuật ngữ}
 \renewcommand*{\acronymname}{LIST OF ABBREVIATIONS}
 \renewcommand*{\entryname}{Abriviation}
@@ -258,7 +258,6 @@
 % \newpage
 % \subfile{chapters/0_6_Thuat_ngu.tex}
 % ===================================================
-
 
 \newpage
 \pagenumbering{arabic}
@@ -278,7 +277,6 @@
 \chapter{THEORETICAL BACKGROUND}
 \label{chapter:Related_works}
 \subfile{Chapter/2_Theoretical_background.tex}
-
 
 \newpage
 %\pagestyle{fancy} % Áp dụng header và footer
@@ -309,7 +307,6 @@
 \label{chapter:reference}
 \subfile{Chapter/7_Reference}
 
-
 % ===================================================
 \newpage
 \renewcommand\bibname{REFERENCE}
@@ -330,11 +327,11 @@
 \titlespacing*{\chapter}{0pt}{-20pt}{20pt}
 
 \titlecontents{chapter}
-    [0.0cm]             % left margin
-    {\bfseries\vspace{0.3cm}}                  % above code
-    {{\bfseries{\scshape} \thecontentslabel.\ }} % numbered format
-    {}         % unnumbered format
-    {\titlerule*[0.3pc]{.}\contentspage}         % filler-page-format, e.g dots
+[0.0cm]             % left margin
+{\bfseries\vspace{0.3cm}}                  % above code
+{{\bfseries{\scshape} \thecontentslabel.\ }} % numbered format
+{}         % unnumbered format
+{\titlerule*[0.3pc]{.}\contentspage}         % filler-page-format, e.g dots
 \chapter{THESIS WRITING GUIDELINE}
 \subfile{Chapter/Appendix_A}
 \newpage

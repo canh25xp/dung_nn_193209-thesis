@@ -456,7 +456,7 @@ Functions: Manage users, manage posts, manage room categories, manage articles, 
 
 \begin{enumerate}
     \item Use case view home page
-          \begin{table}[ht!]
+          \begin{table}[H]
               \caption{Use case view home page}
               \centering
               \begin{tblr}{|l|X|} \hline
@@ -482,7 +482,7 @@ Functions: Manage users, manage posts, manage room categories, manage articles, 
           \end{figure}
 
     \item Use case registration
-          \begin{table}[ht!]
+          \begin{table}[H]
               \caption{Use case registration}
               \centering
               \begin{tblr}{|l|X|} \hline
@@ -507,7 +507,389 @@ Functions: Manage users, manage posts, manage room categories, manage articles, 
               \caption{Activities flow of UC registration}
           \end{figure}
 
+    \item Use case search hostel
+          \begin{table}[H]
+              \caption{Use case search hostel}
+              \centering
+              \begin{tblr}{|l|X|} \hline
+                  Objective      & This use case searches for hostels based on users’ requirements on the website .                         \\ \hline
+                  Actor          & Potential guests looking for accommodation. (Guest, User, Admin)                                         \\ \hline
+                  Pre-condition  & The user must have internet access and be on the hostel search                                           \\ \hline
+                  Main flow      &
+                  1: The user enters search criteria such as location, dates, area, and price.
+
+                  2: The system processes the search query.
+
+                  3: The system retrieves hostel information that matches the criteria from the database.
+
+                  4: The system displays a list of hostels that meet the user’s requirements.
+
+                  5: The system displays a list of hostels that meet the user’s requirements.                                               \\ \hline
+                  Post condition & The user is presented with a list of hostels and can proceed to view more details or make a reservation. \\ \hline
+              \end{tblr}
+              \centering
+          \end{table}
+          Activites flows
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=\textwidth]{Figure/Picture11.png}
+              \caption{ UC registration}
           \end{figure}
+
+    \item Use case View hostel detail.
+          \begin{table}[H]
+              \centering
+              \caption{Use case view hostel details}
+              \begin{tblr}{|l|X|} \hline
+                  Objective      & This use case allows all website’s visitors to view detailed information about a specific hostel on the website. \\ \hline
+                  Actor          & Potential guests interested in hostel accommodations.                                                            \\ \hline
+                  Pre-condition  & The user must have internet access and be on the website.                                                        \\ \hline
+                  Main flow      &
+                  1: The user selects a hostel from all hostels or the search results.
+
+                  2: The system retrieves detailed information about the selected hostel from the database.
+
+                  3: The system displays the detailed information, including photos, amenities, and pricing.                                        \\ \hline
+                  Post condition & The user has access to comprehensive information about the hostel, which aids in making an informed decision.    \\ \hline
+              \end{tblr}
+          \end{table}
+          Activities flow:
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=\textwidth]{Figure/Picture12.png}
+              \caption{ UC registration}
+          \end{figure}
+
+    \item Use case Login
+          \begin{table}[H]
+              \caption{Use case login to website}
+              \centering
+              \begin{tblr}{|l|X|} \hline
+                  Objective      & This use case allows users to login to the website.                          \\ \hline
+                  Actor          & Users                                                                        \\ \hline
+                  Pre-condition  & The user must be registered and have valid login credentials.                \\ \hline
+                  Main flow      &
+                  1: The user navigates to the login page.
+
+                  2: The user enters their username and password.
+
+                  3: The system verifies the credentials.
+
+                  \quad 3.1: If the credentials are wrong, the system will notice errors and return to the login page.
+
+                  \quad 3.2: If the credentials are correct, the system grants access to the user’s account.
+
+                  4: The user is redirected to the homepage or their dashboard.                                 \\ \hline
+                  Post condition & The user is logged in and can access features available to registered users. \\ \hline
+              \end{tblr}
+          \end{table}
+          Activities flow:
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=\textwidth]{Figure/Picture13.png}
+              \caption{ UC Login}
+          \end{figure}
+
+    \item Use case Restore password
+          \begin{table}[H]
+              \caption{Use case restore or reset password}
+              \centering
+              \begin{tblr}{|l|X|} \hline
+                  Objective      & This use case allows users to restore or reset their password.                                              \\ \hline
+                  Actor          & Users who have forgotten their password or wish to reset it.                                                \\ \hline
+                  Pre-condition  & The user must have an existing account and access to the email or phone number associated with the account. \\ \hline
+                  Main flow      &
+                  1: The user clicks on the ‘Forgot Password’ or ‘Reset Password’ link.
+
+                  2: The user enters their email address or phone number.
+
+                  3: The system verifies the user’s information.
+
+                  4: The system sends a password reset link or code to the user’s email or phone.
+
+                  5: The user clicks on the reset link or enters the code provided.
+
+                  6: The user sets a new password.                                                                                             \\ \hline
+                  Post condition & The user has successfully reset their password and can now log in with the new credentials.                 \\ \hline
+              \end{tblr}
+          \end{table}
+          Activities flow:
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=\textwidth]{Figure/Picture14.png}
+              \caption{ UC Restore password}
+          \end{figure}
+
+    \item Use case Post hostel.
+          \begin{table}[H]
+              \caption{Use case post a new blog for renting rooms or finding roommates}
+              \centering
+              \begin{tblr}{|l|X|} \hline
+                  Objective      & This use case allows users to post a new blog to rent users’ room or find roommates.                  \\ \hline
+                  Actor          & Hostels’ owner                                                                                        \\ \hline
+                  Pre-condition  & The actor must be registered on the platform and have the necessary details and photos of the hostel. \\ \hline
+                  Main flow      &
+                  1: The owner/manager logs into their account.
+
+                  2: They navigate to the ‘Post a Hostel’ section.
+
+                  3: They enter details about the hostel, such as location, amenities, room types, and pricing.
+
+                  4: They upload photos of the hostel.
+
+                  5: They submit the hostel listing for review.
+
+                  6: The system verifies the information and approves the listing.
+
+                  7: The hostel is posted on the website and becomes visible to potential guests.                                        \\ \hline
+                  Post condition & The hostel is successfully listed on the website and can be searched and booked by users.             \\ \hline
+              \end{tblr}
+          \end{table}
+          Actitivies flow:
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=\textwidth]{Figure/Picture15.png}
+              \caption{ UC Post hostel}
+          \end{figure}
+
+    \item Use case view and update user information
+          \begin{table}[H]
+              \caption{Use case update user information}
+              \centering
+              \begin{tblr}{|l|X|} \hline
+                  Objective      & This use case allows users to update their information on the website.                                            \\ \hline
+                  Actor          & Users who want to change their information.                                                                       \\ \hline
+                  Pre-condition  & The user must have internet access and be on the appropriate web page.                                            \\ \hline
+                  Main flow      &
+                  1: The user navigates to the section containing the information.
+
+                  2: The user changes personal information in the fields they are able to change.
+
+                  3: The user clicks on Update.
+
+                  4: The system validates the new information.
+
+                  \quad 4.1: If the new information is invalid, return to the view information page.
+
+                  \quad 4.2: If the new information is valid, the system updates the information for the user.
+
+                  5: The system notifies that the information has been updated successfully.                                                         \\ \hline
+                  Post condition & The user’s information is updated in the system, and they can continue to use the website with their new details. \\ \hline
+              \end{tblr}
+          \end{table}
+          Activities flow:
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=\textwidth]{Figure/Picture16.png}
+              \caption{ UC View and Update users information}
+          \end{figure}
+
+    \item Use case change passwords
+          \begin{table}[H]
+              \caption{Use case change password}
+              \centering
+              \begin{tblr}{|l|X|} \hline
+                  Objective      & This use case allows users to change their password.                                            \\ \hline
+                  Actor          & Users                                                                                           \\ \hline
+                  Pre-condition  & The user must be logged in and have access to their account settings.                           \\ \hline
+                  Main flow      &
+                  1: The user navigates to the account settings or security settings page.
+
+                  2: The user selects the option to change the password.
+
+                  3: The user enters their current password for verification.
+
+                  4: The user enters the new password and confirms it by entering it again.
+
+                  5: The system validates the new password and updates the account credentials.
+
+                  6: The system confirms the successful password change to the user.                                               \\ \hline
+                  Post condition & The user’s password is updated, and they may be prompted to log in again with the new password. \\ \hline
+              \end{tblr}
+          \end{table}
+          - Activities flow:
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=\textwidth]{Figure/Picture17.png}
+              \caption{ UC change password}
+          \end{figure}
+
+    \item Use case Update hostel information
+          \begin{table}[H]
+              \caption{Use case update property information}
+              \centering
+              \begin{tblr}{|l|X|} \hline
+                  Objective      & This use case allows hostel owners or managers to update their property’s information on the website.               \\ \hline
+                  Actor          & Hostel owners or managers.                                                                                          \\ \hline
+                  Pre-condition  & The actor must be registered on the platform and have the necessary permissions to update the hostel’s information. \\ \hline
+                  Main flow      &
+                  1: The owner/manager logs into their account.
+
+                  2: They navigate to the ‘My Hostels’ section.
+
+                  3: They select the hostel whose information they wish to update.
+
+                  4: They enter the updated information about the hostel, such as new amenities, updated pricing, or changes in availability.
+
+                  5: They submit the updated information for review.
+
+                  6: The system verifies the updated information and approves the changes.
+
+                  7: The updated hostel information is posted on the website.                                                                          \\ \hline
+                  Post condition & The hostel’s information is updated on the website, and potential guests can view the latest details.               \\ \hline
+              \end{tblr}
+          \end{table}
+          Activities flow:
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=\textwidth]{Figure/Picture18.png}
+              \caption{ UC Update hostel information}
+          \end{figure}
+
+    \item Use case Delete hostel
+          \begin{table}[H]
+              \caption{Use case delete hostel listing}
+              \centering
+              \begin{tblr}{|l|X|} \hline
+                  Objective      & This use case allows hostel owners or admin to delete or remove the hostel from the website.                        \\ \hline
+                  Actor          & Hostel owners or Admin.                                                                                             \\ \hline
+                  Pre-condition  & The actor must be registered on the platform and have the necessary permissions to delete the hostel’s information. \\ \hline
+                  Main flow      &
+                  1: The owner/manager logs into their account.
+
+                  2: They navigate to the ‘My Hostels’ section.
+
+                  3: They select the hostel listing they wish to delete.
+
+                  4: They initiate the deletion process.
+
+                  5: The system asks for confirmation to prevent accidental deletions.
+
+                  6: Upon confirmation, the system removes the hostel listing from the website.                                                        \\ \hline
+                  Post condition & The hostel listing is no longer available on the website, and users cannot search for or book it.                   \\ \hline
+              \end{tblr}
+          \end{table}
+          Activities flow:
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=\textwidth]{Figure/Picture19.png}
+              \caption{ UC Delete hostel}
+          \end{figure}
+
+    \item Use case Logout
+          \begin{table}[H]
+              \caption{Use case logout from website}
+              \centering
+              \begin{tblr}{|l|X|} \hline
+                  Objective      & This use case allows users or admins to logout from the website.                        \\ \hline
+                  Actor          & Users, Admin                                                                            \\ \hline
+                  Pre-condition  & The user must be logged in to the website.                                              \\ \hline
+                  Main flow      &
+                  1: The user clicks on the ‘Logout’ button or link.
+
+                  2: The system ends the user’s session.
+
+                  3: The user is redirected to the login page or the homepage of the website.                              \\ \hline
+                  Post condition & The user is logged out and must log in again to access restricted areas of the website. \\ \hline
+              \end{tblr}
+          \end{table}
+          Activities flow:
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=\textwidth]{Figure/Picture20.png}
+              \caption{ UC Logout}
+          \end{figure}
+
+    \item Use case delete user.
+          \begin{table}[H]
+              \caption{Use case remove user account}
+              \centering
+              \begin{tblr}{|l|X|} \hline
+                  Objective      & This use case allows an administrator or authorized user to remove a user account from the system.    \\ \hline
+                  Actor          & Admin                                                                                                 \\ \hline
+                  Pre-condition  & The actor must be logged in with sufficient permissions to delete user accounts.                      \\ \hline
+                  Main flow      &
+                  1: The administrator navigates to the user management section.
+
+                  2: They search for the user account they wish to delete.
+
+                  3: They select the user account.
+
+                  4: They initiate the deletion process.
+
+                  5: The system asks for confirmation to prevent accidental deletions.
+
+                  6: Upon confirmation, the system removes the user account from the system.
+
+                  7: Both the user account and associated hostel listings are removed from the system.                                   \\ \hline
+                  Post condition & The user account is no longer present in the system, and the user cannot log in or access the system. \\ \hline
+              \end{tblr}
+          \end{table}
+          Activities flow:
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=\textwidth]{Figure/Picture20.png}
+              \caption{ UC Logout}
+          \end{figure}
+
+    \item Use case Static
+          \begin{table}[H]
+              \caption{Use case analyze system's performance}
+              \centering
+              \begin{tblr}{|l|X|} \hline
+                  Objective      & This use case allows an administrator to analyze the system’s work.                     \\ \hline
+                  Actor          & Admin                                                                                   \\ \hline
+                  Pre-condition  & Admin must be logged in.                                                                \\ \hline
+                  Main flow      &
+                  1: Admin clicks on “Analyze/Evaluate”.
+
+                  2: The system redirects to the analysis page to evaluate the website's performance.
+
+                  3: The system displays assessment charts about the website's performance.
+
+                  \quad 3.1: Review analysis on Number of new users.
+
+                  \quad 3.2: Analysis of reviews on Number of motels.
+
+                  \quad 3.3: Analyzing and evaluating the distribution of boarding houses by area.                         \\ \hline
+                  Post condition & The admin is able to view the report and analyze the data for decision-making purposes. \\ \hline
+              \end{tblr}
+          \end{table}
+
+    \item Use case payment via Momo
+          \begin{table}[H]
+              \caption{Use case add money to user account via Momo}
+              \centering
+              \begin{tblr}{|l|X|} \hline
+                  Objective      & This use case allows users to add money to their account via Momo to perform the post function.       \\ \hline
+                  Actor          & User                                                                                                  \\ \hline
+                  Pre-condition  &
+                  User must be logged in.
+
+                  User must have a valid payment method linked.
+                  \\ \hline
+                  Main flow      &
+                  1: User selects the option to pay via Momo.
+
+                  2: System redirects the user to the Momo payment gateway.
+
+                  3: User confirms the payment amount and authorizes the transaction.
+
+                  4: Momo processes the payment and deducts the specified amount from the user's Momo account.
+
+                  5: Momo sends a payment confirmation or failure notification to the system.
+
+                  \quad 5.1: If payment is successful, the system updates the user's account balance.
+
+                  \quad 5.2: If the payment fails, Momo notifies the user and redirects back to the system without updating the balance. \\ \hline
+
+                  Post condition &
+                  User's account balance is increased by the amount added via Momo.
+
+                  User can now use the balance to perform the post function.
+                  \\ \hline
+              \end{tblr}
+          \end{table}
 \end{enumerate}
 
 \end{document}

@@ -210,51 +210,60 @@ Benefits of using Postman:
     \item Debugging: The Postman console helps check what data has been retrieved, making it easy to debug tests.
 \end{itemize}
 
-\section{Status survey}
-\label{section:2.1}
-Thông thường, khảo sát chi tiết về hiện trạng và yêu cầu của phần mềm sẽ được lấy từ ba nguồn chính, đó là (i) người dùng/khách hàng, (ii) các hệ thống đã có, (iii) và các ứng dụng tương tự.
-Sinh viên cần tiến hành phân tích, so sánh, đánh giá chi tiết ưu nhược điểm của các sản phẩm/nghiên cứu hiện có.
-Sinh viên có thể lập bảng so sánh nếu cần thiết.
-Kết hợp với khảo sát người dùng/khách hàng (nếu có), sinh viên nêu và mô tả sơ lược các tính năng phần mềm quan trọng cần phát triển.
+\subsection{Visual Paradigm}
 
-\section{Functional Overview}
-\label{section:2.2}
-Phần \ref{section:2.2} này có nhiệm vụ tóm tắt các chức năng của phần mềm.
-Trong phần này, sinh viên lưu ý chỉ mô tả chức năng mức cao (tổng quan) mà không đặc tả chi tiết cho từng chức năng.
-Đặc tả chi tiết được trình bày trong phần \ref{section:2.3}.
+Visual Paradigm is a versatile software tool designed for modeling, designing, and managing software projects.
+It supports various modeling languages and methodologies, making it suitable for a wide range of applications.
 
-\subsection{General use case diagram}
-\label{subsection:2.2.1}
-Sinh viên vẽ biểu đồ use case tổng quan và giải thích các tác nhân tham gia là gì, nêu vai trò của từng tác nhân, và mô tả ngắn gọn các use case chính.
+Key features of Visual Paradigm include:
+\begin{itemize}
+    \item UML Modeling: Comprehensive support for Unified Modeling Language (UML) diagrams.
+    \item Business Process Modeling: Tools for Business Process Model and Notation (BPMN).
+    \item Database Design: Visual tools for designing databases and generating SQL scripts.
+    \item Agile and Scrum Support: Features for managing agile development and Scrum projects.
+    \item Code Engineering: Code generation and reverse engineering for multiple programming languages.
+    \item Collaboration: Team collaboration features, including version control and project sharing.
+    \item Project Management: Tools for managing tasks, schedules, and resources within projects.
+\end{itemize}
 
-\subsection{Detailed use case diagram}
-\label{subsection:2.2.2}
-Với mỗi use case mức cao trong biểu đồ use case tổng quan, sinh viên tạo một mục riêng như mục \ref{subsection:2.2.2} và tiến hành phân rã use case đó.
-Lưu ý tên use case cần phân rã trong biểu đồ use case tổng quan phải khớp với tên đề mục.
+\section{Template Engine Thyme leaf}
 
-Trong mỗi mục như vậy, sinh viên vẽ và giải thích ngắn gọn các use case phân rã.
+Thymeleaf is a Java XML/XHTML/HTML5 Template Engine that can work in both web and non-web environments.
+It is more suitable for serving XHTML/HTML5 at the View Layer of web applications based on the MVC architecture.
+It can process any XML file, even in offline environments.
+It fully supports interaction with the Spring Framework.
 
-\subsection{Business process}
-\label{subsection:2.2.3}
-Nếu sản phẩm/hệ thống cần xây dựng có quy trình nghiệp vụ quan trọng/đáng chú ý, sinh viên cần mô tả và vẽ biểu đồ hoạt động minh họa quy trình nghiệp vụ đó.
-Sinh viên lưu ý đây không phải là luồng sự kiện của từng use case, mà là luồng hoạt động kết hợp nhiều use case để thực hiện một nghiệp vụ nào đó.
+Thymeleaf can be used as a replacement for JSP at the View Layer of an MVC web application.
+Thymeleaf is open-source software licensed under the Apache 2.0 license.
+Thymeleaf code structure uses pure HTML code and does not employ any non-HTML tags, making it very user-friendly.
 
-Ví dụ, một hệ thống quản lý thư viện có quy trình nghiệp vụ mượn trả với mô tả sơ bộ như sau: Sinh viên làm thẻ mượn, sau đó sinh viên đăng ký mượn sách, thủ thư cho mượn, và cuối cùng sinh viên trả lại sách cho thư viện.
-Một hệ thống có thể có một vài quy trình nghiệp vụ quan trọng như vậy.
-\section{Functional description}
-\label{section:2.3}
-Sinh viên lựa chọn từ 4 đến 7 use case quan trọng nhất của đồ án để đặc tả chi tiết.
-Mỗi đặc tả bao gồm ít nhất các thông tin sau: (i) Tên use case, (ii) Luồng sự kiện (chính và phát sinh), (iii) Tiền điều kiện, và (iv) Hậu điều kiện.
-Sinh viên chỉ vẽ bổ sung biểu đồ hoạt động khi đặc tả use case phức tạp.
-\subsection{Description of use case A}
-\hfill
-\subsection{Description of use case B}
-\hfill
+Typically, with views used in Java such as JSP or JSF, to see changes in the interface, you have to refresh the web page.
+However, with Thymeleaf, you can see changes in the interface without reloading the page, although by default, Thymeleaf cannot handle this issue directly.
 
-\section{Non-functional requirement}
-\label{section:2.4}
-Trong phần này, sinh viên đưa ra các yêu cầu khác nếu có, bao gồm các yêu cầu phi chức năng như hiệu năng, độ tin cậy, tính dễ dùng, tính dễ bảo trì, hoặc các yêu cầu về mặt kỹ thuật như về CSDL, công nghệ sử dụng, v.v.
+\section{Restful API}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Define}
+
+API is an intermediary method and protocol for connecting to other libraries and applications.
+It stands for Application Programming Interface.
+An API is not a programming language; it is simply a set of functions or procedures.
+These functions can be written in various programming languages.
+APIs provide access to a set of commonly used functions, enabling data exchange between applications.
+
+APIs serve as a bridge between different applications and websites.
+Data from a website can be used by software and vice versa.
+
+\subsection{API Works}
+
+\begin{itemize}
+    \item First, build the API URL so that third parties can send data requests to the content-providing server via the HTTP or HTTPS protocol.
+    \item On the content-providing web server, the source applications will perform authentication checks if any, and locate the appropriate resources to create the content for the response.
+    \item The server returns the result in JSON or XML format via the HTTP/HTTPS protocol.
+    \item At the initial request location, which could be a web or mobile application, the JSON/XML data will be parsed to extract the data.
+          After obtaining the data, further actions such as saving it to a database or displaying it are performed.
+    \item REST primarily operates based on the HTTP protocol.
+          The basic activities mentioned above use specific HTTP methods.
+    \item There are four main methods when working with REST APIs: GET, POST, PUT, DELETE, corresponding respectively to the functions: read, create, update, delete.
+\end{itemize}
 
 \end{document}

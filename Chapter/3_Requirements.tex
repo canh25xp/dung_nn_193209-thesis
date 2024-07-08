@@ -1,0 +1,224 @@
+\documentclass[../Main.tex]{subfiles}
+\begin{document}
+
+\section{Introduction problems}
+
+\subsection{Problem statement}
+
+This is a website containing a large amount of information about houses and rooms that the owners do not currently need and want to rent out.
+Visitors to the website can use search functions based on location, such as by city, district, or by specific address, like the house number on a particular street.
+They can also search by rental price and the amenities of the houses or rooms available for rent.
+The website provides detailed information about the houses or rooms available for rent, including the address and contact phone number for the landlord.
+
+Instead of visiting each place to see rental properties, users only need an internet-connected device to access the website and search for the rental information they need, then contact the landlord.
+The website also offers a real-time chat feature for users to conveniently exchange information.
+
+\subsection{Purpose of this system}
+
+\begin{itemize}
+    \item User Interface: Design an intuitive interface that is easy to navigate and visually appealing.
+    \item Basic Functionality: Implement essential features such as search functionality for finding rental information and an upload feature for landlords to post room details.
+    \item Optimized Performance: Ensure the website is highly responsive by optimizing response times and loading speeds.
+    \item Cost Efficiency: Minimize costs and distances for both landlords and tenants by efficiently connecting them through the platform.
+    \item Admin Management: Provide an easy-to-use admin interface for managing room information and user interactions.
+    \item Accurate Data Management: Ensure precise storage and retrieval of data to provide reliable information to users.
+\end{itemize}
+
+\section{Requirements Specification}
+
+\subsection{Software Requirements Specification}
+
+This document specifies the detailed requirements for a room rental web application, catering to administrators and customers.
+The application aims to facilitate efficient room management and rental transactions.
+
+% \begin{table*}[!t]
+%     \caption{Caption}
+%     \label{tbl:tbl}
+%     \centering
+%     \begin{tabularx}{\textwidth}{X X}
+%         \toprule
+%         Role 1 & Descriptions \\
+%         \midrule
+%         Admin
+%                &
+%         Room and Pricing Management: Add, edit, and delete room types and pricing tiers.
+%
+%         User Management: Manage user accounts, including CRUD operations.
+%
+%         Confirmation of Uploaded Rooms: Review and approve rooms uploaded by landlords.
+%
+%         Statistical Analysis: Generate reports on revenue, number of rooms in each region.
+%         \\
+%         Customers
+%                &
+%         Search Functionality: Search for rooms based on room type, price range, area, etc.
+%
+%         Registration and Login: Create an account and securely log in.
+%
+%         Account Funding via Momo: Deposit funds into the account via Momo wallet to post more room listings.
+%         \\
+%         \bottomrule
+%     \end{tabularx}
+% \end{table*}
+
+\subsection{Functional Requirements Specification}
+
+\subsubsection{Main Features of the Website}
+
+Storage of Room Rental Information:
+\begin{itemize}
+    \item Store details about houses and rooms available for rent, such as location, address, rental price, and contact information for landlords.
+    \item Ensure structured data storage for efficient and quick search functionality.
+\end{itemize}
+Attractive and User-Friendly Interface:
+\begin{itemize}
+    \item Design an appealing and user-friendly interface accessible to all user types.
+\end{itemize}
+Flexible Search Functionality:
+\begin{itemize}
+    \item Implement versatile search capabilities allowing users to quickly find rental information based on location, price range, and other relevant criteria.
+\end{itemize}
+
+\subsubsection{Users}
+
+User Registration and Authentication:
+\begin{itemize}
+    \item Users can register for an account on the website.
+          Upon successful registration, a confirmation code will be sent to the registered email address for verification.
+    \item After successful verification, users can log in to the system using their credentials.
+\end{itemize}
+
+Flexible Room Search:
+\begin{itemize}
+    \item Users can search for rental properties based on various criteria such as price, location (address or region), room type, and area size.
+\end{itemize}
+
+Room Upload and Fee:
+\begin{itemize}
+    \item Users with authenticated accounts can upload room rental information.
+          Each room upload will incur a fee of 10000 VND per submission.
+\end{itemize}
+
+Management of Uploaded Room Information:
+\begin{itemize}
+    \item Logged-in users can manage the details of rooms they have uploaded, including editing or deleting listings as needed.
+\end{itemize}
+
+\subsubsection{Admin}
+
+User Management:
+\begin{itemize}
+    \item Admin can manage user accounts, including viewing user details and account statuses.
+    \item Admin has the authority to suspend or deactivate user accounts if suspicious activities are detected.
+\end{itemize}
+
+Room Category Management:
+\begin{itemize}
+    \item Admin can add, edit, or delete room categories (types of rooms available for rent).
+\end{itemize}
+
+Post Management:
+\begin{itemize}
+    \item Admin can add, edit, or delete room listings posted by users.
+\end{itemize}
+
+Statistical Analysis:
+\begin{itemize}
+    \item Admin has access to statistical reports like revenue analysis and regional room count.
+\end{itemize}
+
+\subsection{Non-functional requirements specifications}
+
+\subsubsection{Security}
+
+\begin{itemize}
+    \item Data validation: All input forms must undergo thorough validation to prevent incorrect or incomplete data storage, ensuring data integrity and reliability.
+    \item User Access Control: Users who are not logged in should not have access to account details or room information associated with accounts.
+    \item Data Encryption and Security: User account information, including passwords, must be encrypted and securely stored.
+          Admins should not have access to view user passwords.
+    \item Registration and Password Recovery Authentication: Registration and password recovery processes must include email verification using a code sent to the user's registered email address.
+    \item Admin Access Control: Access to the admin dashboard and functionalities should be restricted to admin accounts only, ensuring proper authorization mechanisms are in place.
+    \item API Security: All APIs must be authenticated using access tokens to prevent unauthorized access and ensure secure communication between client and server.
+    \item User Revocation: User privileges should be revoked upon logout to ensure ongoing security and access control.
+\end{itemize}
+
+\subsubsection{Usability}
+
+\begin{itemize}
+    \item Simple and User-Friendly Interface: The interface should be straightforward and easy to use for all user demographics, ensuring a positive user experience.
+    \item Scalability Under Load: The system should handle multiple users accessing it concurrently without significant performance degradation, ensuring robust performance during peak times.
+    \item Fast Response Times: The system should respond quickly to user requests, minimizing wait times and providing a responsive user experience.
+    \item Data Encryption and Theft Prevention: Critical data, especially user-sensitive information, must be encrypted to prevent theft and unauthorized access.
+    \item Frontend and Backend Input Validation: Validate user inputs both at the frontend (client-side) and backend (server-side) to ensure data integrity and prevent malicious input.
+    \item Separation of Admin and User Interfaces: Admin and user interfaces should be distinctly separated, with appropriate access controls and functionalities restricted to their respective roles.
+\end{itemize}
+
+\section{Entities relationships}
+
+\subsection{Entities}
+
+\subsubsection{Define all entities}
+
+\subsubsection{Data of each entity}
+
+Table authority
+
+Table Category
+
+Table User
+
+Table User-authority
+
+Table blog
+
+Table Province
+
+Table Districts
+
+Table Wards
+
+Table Room
+
+Table Image Room
+
+Table Status Room
+
+Table History-pay
+
+Table contact
+
+\subsection{Relationship}
+
+\section{Use cases diagram}
+
+The use case diagram illustrates specific goals and how users interact with the system.
+The ellipses within the system boundary represent the system's use cases or functions, while the stick figures symbolize the actors or users of the system.
+The lines connecting the actors to the use cases indicate that the actors can perform those functions within the system to achieve their objectives.
+
+\subsection{Use case general}
+
+The website system comprises three main agents:
+\subsubsection{Renter (or Tenant)}
+
+Description: A user who directly interacts with the website's features such as viewing posts, searching for rental rooms, and accessing detailed room information.
+
+Functions: View posts, search for rooms, view room details.
+
+\subsubsection{Landlord}
+Description: The user who posts room listings, with functions including managing posts, creating listings, depositing funds, logging in, and registering.
+
+Functions: Manage posts, create listings, deposit funds, log in, register.
+
+\subsubsection{Administrator}
+
+Description: The role responsible for overseeing the entire system, including user management, post management, room category management, article management, and revenue management.
+
+Functions: Manage users, manage posts, manage room categories, manage articles, manage revenue.
+
+\subsection{Use case specifications}
+
+\begin{enumerate}
+  \item bruh
+\end{enumerate}
+
+\end{document}

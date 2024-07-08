@@ -35,7 +35,7 @@ The application aims to facilitate efficient room management and rental transact
     \caption{User Roles and Descriptions}
     \label{table:roles}
     \centering
-    \begin{tblr}{|c|X|}
+    \begin{tblr}{|l|X|}
         \hline
         Role 1    & Descriptions \\
         \hline
@@ -364,10 +364,10 @@ Statistical Analysis:
     \caption{Table Image Room}
     \centering
     \begin{tblr}{|l|l|l|X|} \hline
-        No & Field      & Data type    & Description                     \\ \hline
-        1  & ID         & Bigint(20)   & Primary key                     \\ \hline
-        2  & link_image & varchar(255) & Link image to show this room    \\ \hline
-        3  & room_id    & Bigint       & Sub-key to link with table room \\ \hline
+        No & Field       & Data type    & Description                     \\ \hline
+        1  & ID          & Bigint(20)   & Primary key                     \\ \hline
+        2  & link\_image & varchar(255) & Link image to show this room    \\ \hline
+        3  & room\_id    & Bigint       & Sub-key to link with table room \\ \hline
     \end{tblr}
 \end{table}
 
@@ -427,6 +427,13 @@ The lines connecting the actors to the use cases indicate that the actors can pe
 
 \subsection{Use case general}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Picture8.png}
+    \caption{Use case general}
+    \label{fig:usecase}
+\end{figure}
+
 The website system comprises three main agents:
 \subsubsection{Renter (or Tenant)}
 
@@ -448,7 +455,55 @@ Functions: Manage users, manage posts, manage room categories, manage articles, 
 \subsection{Use case specifications}
 
 \begin{enumerate}
-    \item bruh
+    \item Use case view home page
+          \begin{table}[ht!]
+              \caption{Use case view home page}
+              \centering
+              \begin{tblr}{|l|X|} \hline
+                  Objective      & This use case allows all people to see the home page                   \\ \hline
+                  Actor          & Website visitors (Guest, User, Admin)                                  \\ \hline
+                  Pre-condition  & The visitor must have internet access and a compatible web browser     \\ \hline
+                  Main flow      &
+                  1: The visitor navigates to the website's URL.
+
+                  2: The system verifies if the visitor has an active session.
+
+                  3: The system accesses the database to gather the required display information.
+
+                  4: The system presents the homepage to the visitor.                                     \\ \hline
+                  Post condition & The visitor is able to view the homepage and interact with its content \\ \hline
+              \end{tblr}
+          \end{table}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=\textwidth]{Figure/Picture9.png}
+              \caption{Activities flow}
+          \end{figure}
+
+    \item Use case registration
+          \begin{table}[ht!]
+              \caption{Use case registration}
+              \centering
+              \begin{tblr}{|l|X|} \hline
+                  Objective      & This use case allows all people to see the home page                   \\ \hline
+                  Actor          & Website visitors (Guest, User, Admin)                                  \\ \hline
+                  Pre-condition  & The visitor must have internet access and a compatible web browser     \\ \hline
+                  Main flow      &
+                  1: The visitor navigates to the website's URL.
+
+                  2: The system verifies if the visitor has an active session.
+
+                  3: The system accesses the database to gather the required display information.
+
+                  4: The system presents the homepage to the visitor.                                     \\ \hline
+                  Post condition & The visitor is able to view the homepage and interact with its content \\ \hline
+              \end{tblr}
+          \end{table}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=\textwidth]{Figure/Picture10.png}
+              \caption{Activities flow}
+          \end{figure}
 \end{enumerate}
 
 \end{document}

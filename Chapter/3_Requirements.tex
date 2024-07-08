@@ -162,7 +162,7 @@ Statistical Analysis:
     \caption{Define all entities}
     \label{table:entities}
     \centering
-    \begin{tblr}{|c|l|X|}
+    \begin{tblr}{|l|l|X|}
         \hline
         No & Entity         & Role                                                            \\
         \hline
@@ -197,33 +197,227 @@ Statistical Analysis:
 
 \subsubsection{Data of each entity}
 
-Table authority
+\begin{table}[H]
+    \caption{Table authority}
+    \label{table:authority}
+    \centering
+    \begin{tblr}{|l|l|l|l|}
+        \hline
+        No & Field & Data type    & Description            \\
+        \hline
+        1  & Name  & Varchar(255) & Name of each authority \\
+        \hline
+    \end{tblr}
+\end{table}
 
-Table Category
+\begin{table}[H]
+    \caption{Table Category}
+    \label{table:category}
+    \centering
+    \begin{tblr}{|l|l|l|l|}
+        \hline
+        No & Field & Data type    & Description           \\
+        \hline
+        1  & ID    & Bigint(20)   & Primary key           \\
+        \hline
+        2  & Name  & Varchar(255) & Name of each category \\
+        \hline
+    \end{tblr}
+\end{table}
 
-Table User
+\begin{table}[H]
+    \caption{Table User}
+    \label{table:user}
+    \centering
+    \begin{tblr}{|l|l|l|l|}
+        \hline
+        No & Field          & Data type    & Description                       \\
+        \hline
+        1  & ID             & Bigint(20)   & Primary key                       \\
+        \hline
+        2  & Activation-key & Varchar(255) & Status                            \\
+        \hline
+        3  & Actived        & Boolean      & Lock status                       \\
+        \hline
+        4  & Password       & Varchar(255) & Password to login                 \\
+        \hline
+        5  & Username       & Varchar(255) & Email to login                    \\
+        \hline
+        6  & Full name      & Varchar(255) & Name of users                     \\
+        \hline
+        7  & Phone          & Varchar(255) & Information to contact            \\
+        \hline
+        8  & Created-date   & Date         & The day created account           \\
+        \hline
+        9  & Created time   & Time         & The hours created account         \\
+        \hline
+        10 & Amount         & Double       & Money of accounts to post hostels \\
+        \hline
+        11 & Link-face      & Varchar(255) & Information to contact via FB     \\
+        \hline
+        12 & Avatar         & Varchar(255) & Present Image of each user        \\
+        \hline
+    \end{tblr}
+\end{table}
 
-Table User-authority
+\begin{table}[H]
+    \caption{Table User-authority}
+    \label{table:user-authority}
+    \centering
+    \begin{tblr}{|l|l|l|l|}
+        \hline
+        No & Field          & Data type    & Description                         \\
+        \hline
+        1  & User-ID        & Bigint(20)   & Sub key to link with table user     \\
+        \hline
+        2  & Authority name & Varchar(255) & Sub-key to link with table category \\
+        \hline
+    \end{tblr}
+\end{table}
 
-Table blog
+\begin{table}[H]
+    \caption{Table blog}
+    \label{table:blog}
+    \centering
+    \begin{tblr}{|l|l|l|X|}
+        \hline
+        No        & Field        & Data type            & Description                                   \\
+        \hline
+        1         & ID           & Bigint               & Primary key                                   \\
+        \hline
+        2 Content & Longtext     & Content of this blog                                                 \\
+        \hline
+        3         & Created-Date & Date                 & The date created this blog                    \\
+        \hline
+        4         & Created-Time & Time                 & The time created this blog                    \\
+        \hline
+        5         & Description  & Longtext             & Describe this blog                            \\
+        \hline
+        6         & Image banner & Varchar(255)         & Avatar                                        \\
+        \hline
+        7         & Title        & Varchar(255)         &                                               \\
+        \hline
+        8         & User\_ID     & Bigint               & Sub key to link with user who posts this blog \\
+        \hline
+        9         & Vi\_pham     & Boolean              & Status of blog                                \\
+        \hline
+    \end{tblr}
+\end{table}
 
-Table Province
+\begin{table}[H]
+    \caption{Table Province}
+    \centering
+    \begin{tblr}{|l|l|l|X|}
+        \hline
+        No & Field & Data type   & Description                     \\
+        \hline
+        1  & ID    & Bigint      & Primary key                     \\
+        \hline
+        2  & Name  & Varchar(20) & Name of all province in Vietnam \\
+        \hline
+    \end{tblr}
+\end{table}
 
-Table Districts
+\begin{table}[H]
+    \caption{Table Districts}
+    \centering
+    \begin{tblr}{|l|l|l|X|} \hline
+        No & Field        & Data type   & Description                         \\ \hline
+        1  & ID           & Bigint      & Primary key                         \\ \hline
+        2  & Name         & Varchar(20) & Name of all Districts in Vietnam    \\ \hline
+        3  & Province\_ID & Bigint      & Sub-key to link with table province \\ \hline
+    \end{tblr}
+\end{table}
 
-Table Wards
+\begin{table}[H]
+    \caption{Table Wards}
+    \centering
+    \begin{tblr}{|l|l|l|X|} \hline
+        1 & ID            & Bigint      & Primary key                          \\ \hline
+        2 & Name          & Varchar(20) & Name of all wards in Vietnam         \\ \hline
+        3 & Districts\_ID & Bigint      & Sub-key to link with table districts \\ \hline
+    \end{tblr}
+\end{table}
 
-Table Room
+\begin{table}[H]
+    \caption{Table Room}
+    \centering
+    \begin{tblr}{|l|l|l|X|} \hline
+        No & Field        & Data type    & Desciption                             \\ \hline
+        1  & ID           & Bigint       & Primary key                            \\ \hline
+        2  & Area         & Float        & Size of this room                      \\ \hline
+        3  & Banner       & Varchar(255) & Avatar of this room                    \\ \hline
+        4  & Created-date & Date         & The date to post this room             \\ \hline
+        5  & Created-time & Time         & The time to post this room             \\ \hline
+        6  & Description  & Longtext     & All important information of this room \\ \hline
+        7  & Price        & Double       & The cost customer must pay a month     \\ \hline
+        8  & Street       & Varchar      & Exactly location                       \\ \hline
+        9  & Title room   & Varchar      & Title of this room to rent             \\ \hline
+        10 & category\_id & bigint       & Sub-key to link with table category    \\ \hline
+        11 & user\_id     & bigint       & Sub-key to link with table user        \\ \hline
+        12 & ward\_id     & bigint       & Sub-key to link with table ward        \\ \hline
+        13 & status\_room & bigint       & Sub-key to link with status\_room      \\ \hline
+    \end{tblr}
+\end{table}
 
-Table Image Room
+\begin{table}[H]
+    \caption{Table Image Room}
+    \centering
+    \begin{tblr}{|l|l|l|X|} \hline
+        No & Field      & Data type    & Description                     \\ \hline
+        1  & ID         & Bigint(20)   & Primary key                     \\ \hline
+        2  & link_image & varchar(255) & Link image to show this room    \\ \hline
+        3  & room_id    & Bigint       & Sub-key to link with table room \\ \hline
+    \end{tblr}
+\end{table}
 
-Table Status Room
+\begin{table}[H]
+    \caption{Table Status Room}
+    \centering
+    \begin{tblr}{|l|l|l|X|} \hline
+        STT & Field & Data type    & Description         \\ \hline
+        1   & Id    & Bigint(20)   & Primary key         \\ \hline
+        2   & Name  & Varchar(255) & Status of this room \\ \hline
+    \end{tblr}
+\end{table}
 
-Table History-pay
+\begin{table}[H]
+    \caption{Table History-pay}
+    \centering
+    \begin{tblr}{|l|l|l|X|} \hline
+        No & Field        & Data Type & Description               \\ \hline
+        1  & ID           & Bigint    & Primary key               \\ \hline
+        2  & Created Date & Date      & The date transaction      \\ \hline
+        3  & Created Time & Time      & The time transaction      \\ \hline
+        4  & Order-ID     & Varchar   & ID order online payment   \\ \hline
+        5  & Request-ID   & Varchar   & ID request online payment \\ \hline
+        6  & Total amount & Double    & Total money payment       \\ \hline
+    \end{tblr}
+\end{table}
 
-Table contact
+\begin{table}[H]
+    \caption{Table contact}
+    \centering
+    \begin{tblr}{|l|l|l|X|} \hline
+        No & Field         & Data Type    & Description                                \\ \hline
+        1  & ID            & Bigint       & Primary key                                \\ \hline
+        2  & Content       & Varchar(255) & Content of this contact                    \\ \hline
+        3  & Created\_date & date         & The date created contact                   \\ \hline
+        4  & Created\_time & time         & The time created contact                   \\ \hline
+        5  & da\_xem       & int          & Status if admin see contact or not         \\ \hline
+        6  & Email         & varchar(255) & Information show this user created contact \\ \hline
+        7  & Fullname      & varchar(255) & Name of user creating contact              \\ \hline
+    \end{tblr}
+\end{table}
 
 \subsection{Relationship}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Figure/Picture7.png}
+    \caption{Relationship}
+    \label{fig:relationship}
+\end{figure}
 
 \section{Use cases diagram}
 
